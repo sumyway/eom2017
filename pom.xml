@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.company</groupId>
+	<artifactId>eom2017</artifactId>
+	<name>eom2017</name>
+	<packaging>war</packaging>
+	<version>1.0.0-BUILD-SNAPSHOT</version>
+	
+	<properties>
+        <ver.jdk>1.9</ver.jdk>
+        <ver.spring>4.3.3.RELEASE</ver.spring>
+        <ver.hibernate-validator>5.1.1.Final</ver.hibernate-validator>
+        <ver.mybatis>3.2.8</ver.mybatis>
+        <ver.mybatis-spring>1.2.2</ver.mybatis-spring>
+        <ver.aspectj>1.6.11</ver.aspectj>
+        <ver.servlet>3.1.0</ver.servlet>
+        <ver.jsp>2.1</ver.jsp>
+        <ver.jstl>1.2</ver.jstl>
+        <ver.commons-dbcp>1.4</ver.commons-dbcp>
+        <ver.commons-io>2.4</ver.commons-io>
+        <ver.commons-lang>2.6</ver.commons-lang>
+        <ver.commons-httpclient>3.1</ver.commons-httpclient>
+        <ver.commons-fileupload>1.3.1</ver.commons-fileupload>
+        <ver.commons-logging>1.2</ver.commons-logging>
+        <ver.commons-beanutils>1.9.2</ver.commons-beanutils>
+        <ver.json-lib>2.3</ver.json-lib>
+        <ver.json>1.9.13</ver.json>
+        <ver.json-simple>1.1.1</ver.json-simple>
+        <ver.mysql-connector-java>6.0.5</ver.mysql-connector-java>
+        <ver.slf4j>1.7.5</ver.slf4j>
+        <ver.logback>1.0.11</ver.logback>
+        <ver.logback-ext>0.1.1</ver.logback-ext>
+        <!-- <ver.ojdbc14>10.2.0.4.0</ver.ojdbc14> -->
+        <ver.jxls>1.0.6</ver.jxls>
+        <ver.junit>4.12</ver.junit>
+	</properties>
+	
+	<dependencies>
+		<!-- Start - Spring dependencies -->
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${ver.spring}</version>
+        </dependency>
+        <!-- End - Spring dependencies -->
+        
+        <!-- Start - Spring & Hibernate Validator dependencies -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${ver.hibernate-validator}</version>
+        </dependency>
+        <!-- End - Spring & Hibernate Validator dependencies -->
+
+		 <!-- Start - Database & Mybatis dependencies -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${ver.commons-dbcp}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${ver.mybatis}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${ver.mybatis-spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+        <!-- End - Database & Mybatis dependencies -->
+
+		<!-- Start - AspectJ -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${ver.aspectj}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${ver.aspectj}</version>
+        </dependency>
+        <!-- End - AspectJ -->
+
+		<!-- Start - Java Servlet Spec dependencies -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${ver.servlet}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${ver.jsp}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${ver.jstl}</version>
+        </dependency>
+        <!-- End - Java Servlet Spec dependencies -->
+ 
+        <!-- Start - Apache Common -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${ver.commons-io}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>${ver.commons-httpclient}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${ver.commons-lang}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${ver.commons-fileupload}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${ver.commons-logging}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${ver.commons-beanutils}</version>
+        </dependency>
+        <!-- End - Apache Common -->
+ 
+        <!-- Start - Logging dependencies -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${ver.slf4j}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${ver.logback}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${ver.logback}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.logback-extensions</groupId>
+            <artifactId>logback-ext-spring</artifactId>
+            <version>${ver.logback-ext}</version>
+        </dependency>
+        <!-- End - Logging dependencies -->
+ 
+        <!-- Start - json dependencies -->
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>${ver.json-lib}</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>${ver.json-simple}</version>
+        </dependency>
+        <!-- End - json dependencies -->
+ 
+        <!-- Start - MySQL dependencies -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${ver.mysql-connector-java}</version>
+        </dependency>
+        <!-- End - MySQL dependencies -->
+        
+        <!-- Start - ODBC dependencies (** Need to add the repository for odbc, refer to below repository information) -->
+        <!-- <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>${ver.ojdbc14}</version>
+        </dependency>  -->
+        <!-- End - ODBC dependencies -->
+ 
+        <!-- Start - JUnit Test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${ver.junit}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- End - JUnit Test dependencies -->
+	</dependencies>
+	
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>${ver.jdk}</source>
+                    <target>${ver.jdk}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+	
+	<repositories>
+        <repository>
+            <id>spring-snapshot</id>
+            <name>Spring Snapshot Repository</name>
+            <url>http://repo.springsource.org/snapshot</url>
+        </repository>
+        <repository>
+            <id>repo.maven.apache.org</id>
+            <url>http://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+</project>
